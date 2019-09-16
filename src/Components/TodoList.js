@@ -4,10 +4,8 @@ export default function TodoList(props) {
     
     return (
             <ul>
-                {props.todos.map(todo => (
-                    <li>{todo}</li>
-                ))
-
+                {
+                    props.todos.map((item, index) => ( <li key={index}>{item}</li>))
                 }
             </ul>
     )

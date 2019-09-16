@@ -12,6 +12,20 @@
 }
 
 .main form {
-    border: 1px solid blue;
-    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main input {
+    border: 1px solid #CCC;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.main button {
+    padding: 15px;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    background-color: #7BDBE8;
+    color: #FFF;
 }

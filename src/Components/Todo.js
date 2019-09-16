@@ -14,7 +14,7 @@ export default class Todo extends Component {
 
     handleSubmit = e => {
         e.preventDefault();
-        this.setState({ todos: [this.state.todo, ...this.state.todos]})
+        this.setState({ todos: [this.state.todo, ...this.state.todos], todo: ""})
     }
 
 
@@ -31,12 +31,15 @@ export default class Todo extends Component {
                         name="todo" 
                         placeholder="Todo"
                         type="text"
-                        onChange={this.handleChange} 
+                        onChange={this.handleChange}
+                        value={this.state.todo} 
                     />
                     
                     <button type="submit" >Add</button>
                 </form>
-                <TodoList todos={this.state.todos} />
+                <div className="list">
+                    <TodoList todos={this.state.todos} />
+                </div>
             </div>
            
         );
