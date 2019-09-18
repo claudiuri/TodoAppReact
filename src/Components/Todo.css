@@ -13,57 +13,5 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-
-.main .form {
-    max-width: 300px;
-}
-
-.main form {
-    width: 300px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.main input {
-    flex-basis: 73%;
-    border: 1px solid #CCC;
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.main button {
-    padding: 15px;
-    border: none; 
-    border-radius: 5px;
-    background-color: #7BDBE8;
     color: #FFF;
-}
-
-.list {
-    max-width: 300px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-ul {
-    color: #FFF;
-    width: 100%;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    list-style-position: outside;
-    align-items: center;
-}
-
-ul li {
-
-    margin-top: 10px;
-    max-width: 300px;
-    border: 1px solid #CCC;
-    border-radius: 5px;
-    padding: 5px 10px;
 }

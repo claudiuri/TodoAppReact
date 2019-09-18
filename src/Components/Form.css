@@ -1,0 +1,24 @@
+.main .form {
+    max-width: 300px;
+}
+
+.main form {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main input {
+    flex-basis: 73%;
+    border: 1px solid #CCC;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.main button {
+    padding: 15px;
+    border: none; 
+    border-radius: 5px;
+    background-color: #7BDBE8;
+    color: #FFF;
+}

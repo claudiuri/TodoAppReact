@@ -1,48 +1,34 @@
 import React, { Component}  from 'react';
 import TodoList from './TodoList';
+import Header from './Header';
+import Form from './Form';
 import './Todo.css'
 
 export default class Todo extends Component {
     constructor(props){
         super(props);
         this.state = {
-            todo: "",
+            newTodo: "",
             todos: []
         }
     }
-  
 
-    handleSubmit = e => {
-        e.preventDefault();
-        this.setState({ todos: [this.state.todo, ...this.state.todos], todo: ""})
+    handleFormSubmit = () => {
+        this.setState({ todos: [...this.state.todos, this.state.newTodo], newTodo: ""})
     }
 
-
-   handleChange = e => {
-       this.setState({ todo: e.target.value})
-   }
+    handleFormChange = todo => {
+        this.setState({ newTodo: todo})
+    }
 
     render() {
+        const { newTodo, todos } = this.state;
 
         return (
             <div className="main">
-                <div className="form">
-                    <form onSubmit={this.handleSubmit}>
-                        <input 
-                            name="todo" 
-                            placeholder="Todo"
-                            type="text"
-                            onChange={this.handleChange}
-                            value={this.state.todo} 
-                        />
-                        
-                        <button type="submit" >Add</button>
-                    </form>
-                </div>
-               
-                <div className="list">
-                    <TodoList todos={this.state.todos} />
-                </div>
+                <Header/>
+                <Form todo={newTodo} onFormChange={this.handleFormChange} onFormSubmit={this.handleFormSubmit}/>
+                <TodoList todos={todos} />
             </div>
            
         );
