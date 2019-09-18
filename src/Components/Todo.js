@@ -26,17 +26,20 @@ export default class Todo extends Component {
 
         return (
             <div className="main">
-                <form onSubmit={this.handleSubmit}>
-                    <input 
-                        name="todo" 
-                        placeholder="Todo"
-                        type="text"
-                        onChange={this.handleChange}
-                        value={this.state.todo} 
-                    />
-                    
-                    <button type="submit" >Add</button>
-                </form>
+                <div className="form">
+                    <form onSubmit={this.handleSubmit}>
+                        <input 
+                            name="todo" 
+                            placeholder="Todo"
+                            type="text"
+                            onChange={this.handleChange}
+                            value={this.state.todo} 
+                        />
+                        
+                        <button type="submit" >Add</button>
+                    </form>
+                </div>
+               
                 <div className="list">
                     <TodoList todos={this.state.todos} />
                 </div>
