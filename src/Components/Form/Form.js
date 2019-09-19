@@ -6,13 +6,11 @@ export default class Form extends Component {
         super(props);
         this.state = { }
     }
-  
 
     handleSubmit = e => {
         e.preventDefault();
         this.props.onFormSubmit()
     }
-
 
     handleChange = e => {
         this.props.onFormChange(e.target.value);

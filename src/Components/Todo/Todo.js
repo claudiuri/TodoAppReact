@@ -1,7 +1,7 @@
 import React, { Component}  from 'react';
-import TodoList from './TodoList';
-import Header from './Header';
-import Form from './Form';
+import List from '../List/List';
+import Header from '../Header/Header';
+import Form from '../Form/Form';
 import './Todo.css'
 
 export default class Todo extends Component {
@@ -21,6 +21,12 @@ export default class Todo extends Component {
         this.setState({ newTodo: todo})
     }
 
+    handleTodoClick = todoIndex => {
+        let { todos } = this.state;
+        todos = todos.filter((item, index) => { return index !== todoIndex });
+        this.setState({ todos });
+    }
+
     render() {
         const { newTodo, todos } = this.state;
 
@@ -28,7 +34,7 @@ export default class Todo extends Component {
             <div className="main">
                 <Header/>
                 <Form todo={newTodo} onFormChange={this.handleFormChange} onFormSubmit={this.handleFormSubmit}/>
-                <TodoList todos={todos} />
+                <List todos={todos} onTodoClick={this.handleTodoClick}/>
             </div>
            
         );

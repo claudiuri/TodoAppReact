@@ -18,7 +18,7 @@ ul {
 }
 
 ul li {
-
+    cursor: pointer;
     margin-top: 10px;
     max-width: 300px;
     border: 1px solid #CCC;
